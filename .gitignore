@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+Ekran Resmi*.png
 
 # debug
 npm-debug.log*
