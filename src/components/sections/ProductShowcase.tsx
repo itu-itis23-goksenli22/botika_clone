@@ -72,7 +72,7 @@ export default function ProductShowcase() {
 
   return (
     <section ref={sectionRef} className="py-[6rem] lg:py-[9.6rem]">
-      <div className="max-w-[90rem] mx-auto px-[2rem]">
+      <div className="max-w-[110rem] mx-auto px-[2rem]">
         {/* Heading */}
         <div className="text-center mb-[3.2rem] lg:mb-[4.8rem]">
           <h2 className="text-[2.8rem] lg:text-[3.2rem] font-semibold leading-[1.08] tracking-[-0.128rem] mb-[1.6rem]">
@@ -83,10 +83,10 @@ export default function ProductShowcase() {
           </Button>
         </div>
 
-        {/* Card stack area with overlaid labels */}
+        {/* Card stack area */}
         <div
           ref={cardsRef}
-          className="relative w-full aspect-[16/10] rounded-[1.6rem] overflow-hidden bg-[#f5f5f5]"
+          className="relative w-full aspect-[16/9] rounded-[1.6rem] overflow-hidden bg-[#f5f5f5]"
         >
           {PRODUCT_TYPES.map((type, index) => (
             <div
@@ -115,7 +115,10 @@ export default function ProductShowcase() {
             </div>
           ))}
 
-          {/* Product type labels - overlaid on the image */}
+          {/* Gradient overlay to cover English labels in images */}
+          <div className="absolute right-0 top-0 bottom-0 w-[45%] bg-gradient-to-l from-white/90 via-white/70 to-transparent z-[5]" />
+
+          {/* Turkish labels */}
           <div className="absolute right-[4rem] lg:right-[6rem] top-1/2 -translate-y-1/2 flex flex-col gap-[0.4rem] z-10">
             {PRODUCT_TYPES.map((type, index) => (
               <span
